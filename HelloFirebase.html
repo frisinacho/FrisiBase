@@ -7,10 +7,12 @@
     <script>
         var ref = new Firebase("https://frisibase.firebaseio.com");
         ref.child("appName").on("value", function(snapshot){
+            document.getElementById("titular").textContent = snapshot.val();
+            console.log(snapshot.val());
         });
     </script>
 </head>
 <body>
-
+    <h1 id="titular"></h1>
 </body>
 </html>
